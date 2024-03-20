@@ -4,7 +4,7 @@ import shutil
 import subprocess
 from datetime import datetime
 import pytz
-import gzip
+# import gzip
 
 def current_time_gmt_plus_6():
     # Get current UTC time
@@ -33,9 +33,9 @@ def clean_directory(directory_path):
             except Exception as e:
                 print(f'Failed to delete {file_path}. Reason: {e}')
 
-def compress_to_gz(file_path):
-    with open(file_path, 'rb') as f_in, gzip.open('output/compressed-output.gz', 'wb') as f_out:
-        f_out.writelines(f_in)
+# def compress_to_gz(file_path):
+#     with open(file_path, 'rb') as f_in, gzip.open('output/compressed-output.gz', 'wb') as f_out:
+#         f_out.writelines(f_in)
 
 def LTNG_Processing (CTR_Path, Linux_LTNG_Path):
     OUT_PATH = 'output/output.txt'
